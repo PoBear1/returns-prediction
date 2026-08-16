@@ -119,7 +119,6 @@ class generator_trainer:
 			self.optimiser.zero_grad()
 			if (batch + 1) % 100 == 0:
 				loss_history.append([loss.item(), (batch + 1) * len(X)])
-		
 		return [loss_history, size]
 	def test(self) -> tuple[float, float, float]:
 		num_batches: int = len(self.tests_dl)

@@ -13,7 +13,7 @@ batch_size: int = 50
 epochs: int = 1000
 num_rets: int = int(argv[2]) if len(argv) >= 3 else 9 
 signed = argv[3] == 'Y' if len(argv) >= 4 else True
-device = "mps" if torch.backends.mps.is_available() else ("cuda" if torch.cuda.is_vailable() else "cpu")
+device = "mps" if torch.backends.mps.is_available() else ("cuda" if torch.cuda.is_available() else "cpu")
 symbol_name: str = argv[1]
 
 returns_data: tuple[model.returns_dataset, model.returns_dataset] = (
