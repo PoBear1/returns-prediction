@@ -6,7 +6,7 @@ This is a side project of mine that attempts to use more powerful and modern ML 
 
 This repo does not include the data I used in the experiment because they were too big to put in, rather I am going to leave a hint as to what I used:
 
-1. I used `alpaca-py` as the main client to get market data (both historical and real-time).
+1. I used `alpaca-py` as the main client to get market data (both historical and real-time), on the free tier. You can probably guess the quality of the data from that.
 2. I used minute-by-minute asset bars, rather than day-to-day or hour-by-hour, and if possible my training/testing data came from the very start of 2020 to the end of the 31st of July, 2026.
 3. I used the following assets (no particular reason why, I just wanted to see how well my model performed over each type of asset):
 	- Garden-variety stocks (AAPL, AMZN, GOOG, META, MSFT, NFLX, NVDA, TSLA)
