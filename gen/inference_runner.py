@@ -5,7 +5,8 @@ import	base.arch_model	as		model
 from	sys				import	argv
 # how do I import this model?
 ret_nums = 9
-nn_returns: model.feedforward_generation = model.feedforward_generation(device = "mps", input_size = ret_nums).to("mps")
+device = "mps" if torch.backends.mps.is_available() else ("cuda" if torch.cuda.is_vailable() else "cpu")
+nn_returns: model.feedforward_generation = model.feedforward_generation(device = device, input_size = ret_nums).to(device)
 nn_returns.eval()
 nn_returns.load_state_dict(torch.load(f'model/{argv[1]}_{ret_nums}_model_params.pth'))
 # ok so now I've imported this model, what do I do with it? 

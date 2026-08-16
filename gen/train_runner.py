@@ -13,7 +13,7 @@ batch_size: int = 50
 epochs: int = 1000
 num_rets: int = int(argv[2]) if len(argv) >= 3 else 9 
 signed = argv[3] == 'Y' if len(argv) >= 4 else True
-
+device = "mps" if torch.backends.mps.is_available() else ("cuda" if torch.cuda.is_vailable() else "cpu")
 symbol_name: str = argv[1]
 
 returns_data: tuple[model.returns_dataset, model.returns_dataset] = (
@@ -28,7 +28,7 @@ returns_dataloaders: tuple[DataLoader, DataLoader] = (
 
 lr: float = 10
 
-model_trainer: model.generator_trainer = model.generator_trainer(returns_dataloaders, lr, momentum = 0.01, in_size = num_rets, lmbd = 0.1, warmups = 40, multi = 1000, device = "mps")
+model_trainer: model.generator_trainer = model.generator_trainer(returns_dataloaders, lr, momentum = 0.01, in_size = num_rets, lmbd = 0.1, warmups = 40, multi = 1000, device = device)
 for t in range(epochs):
 	print(f"Epoch {t + 1}\n-------------------------------")
 	history, size = model_trainer.train()
