@@ -10,7 +10,7 @@ This repo does not include the data I used in the experiment because they were t
 
 1. I used `alpaca-py` as the main client to get market data (both historical and real-time), on the free tier. You can probably guess the quality of the data from that.
 2. I used minute-by-minute asset bars, rather than day-to-day or hour-by-hour, and if possible my training/testing data came from the very start of 2020 to the end of the 31st of July, 2026.
-3. I used the following assets (no particular reason why, I just wanted to see how well my model performed over each type of asset):
+3. I used the following assets (no particular reason why apart from the fact that they are all equities which makes it easier to download data freely, I just wanted to see how well my model performed over each type of asset):
 	- Garden-variety stocks (AAPL, AMZN, GOOG, META, MSFT, NFLX, NVDA, TSLA)
 	- Bond ETFs (AGG, BND)
 	- ETFs on country equities (EWA, EWC, EWD, EWG, EWH, EWI, EWJ, EWK, EWL, EWM, EWN, EWO, EWP, EWQ, EWS, EWT, EWU, EWW, EWY, EWZ)
