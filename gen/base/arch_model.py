@@ -20,18 +20,20 @@ def avg_param_magnitude(model):
 # this penalty increases much faster as s increases
 # hopefully now the robot realises that s shouldn't be too big.
 class t_loss_function(nn.Module):
-	def __init__(self, lmbd: float = 0.01, eps: float = 1e-7) -> None:
+	def __init__(self, lmbd: float = 0.01, eta: float = 0.1, eps: float = 1e-7) -> None:
 		super().__init__()
 		self.lmbd = lmbd
 		self.eps = eps
+		self.eta = eta
 	# outputs = (N, 2), targets = (N, )
 	def forward(self, outputs: torch.Tensor, targets: torch.Tensor) -> torch.Tensor:
 		deviations: torch.Tensor = outputs[:, 0] - targets
 		sq_dev: torch.Tensor = deviations * deviations
 		inner_error: torch.Tensor = sq_dev / (2 * outputs[:, 1] + self.eps)
 		log_error: torch.Tensor = 1.5 * torch.log(inner_error + 1 + self.eps) + 0.5 * torch.log(outputs[:, 1])
-		reg: torch.Tensor = torch.abs(outputs[:, 1] + self.eps) * self.lmbd
-		return (log_error + reg).mean()
+		var_reg: torch.Tensor = torch.abs(outputs[:, 1] + self.eps) * self.lmbd
+		mean_reg: torch.Tensor = sq_dev * self.eta
+		return (log_error + var_reg + mean_reg).mean()
 class feedforward_generation(nn.Module):
 	def __init__(self, device: str = "cpu", input_size: int = 9) -> None:
 		super().__init__()
@@ -97,9 +99,9 @@ class exp_lr_scheduler(optim.lr_scheduler._LRScheduler):
 		scale: float = np.maximum(np.minimum(1 / np.sqrt(step), step / np.sqrt(self.warmup)) * self.multi, self.min_lr)
 		return [base_lr * scale for base_lr in self.base_lrs]
 class generator_trainer:
-	def __init__(self, dataloader: tuple[DataLoader, DataLoader], lr: float = 0.001, momentum: float = 0.01, lmbd: float = 0.01, eps: float = 1e-7, in_size: int = 9, warmups: int = 4000, multi: float = 1.0, device: str = "cpu") -> None:
+	def __init__(self, dataloader: tuple[DataLoader, DataLoader], lr: float = 0.001, momentum: float = 0.01, lmbd: float = 0.01, eta: float = 0.1, eps: float = 1e-7, in_size: int = 9, warmups: int = 4000, multi: float = 1.0, device: str = "cpu") -> None:
 		self.model: nn.Module = (feedforward_generation)(device, in_size).to(device)
-		self.loss_fn: nn.Module = (t_loss_function)(lmbd, eps).to(device)
+		self.loss_fn: nn.Module = (t_loss_function)(lmbd, eta, eps).to(device)
 		self.optimiser: optim.Optimizer = optim.SGD(self.model.parameters(), lr = lr, momentum = momentum, weight_decay = 0.0)
 		# self.optimiser: optim.Optimizer = optim.Adam(self.model.parameters(), lr = lr, beta = (0.9, 0.98), eps = 1e-9, weight_decay = 0.0)
 		self.scheduler: optim.lr_scheduler._LRScheduler = exp_lr_scheduler(self.optimiser, warmups, multi, min_lr = 0.0)

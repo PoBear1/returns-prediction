@@ -28,7 +28,7 @@ returns_dataloaders: tuple[DataLoader, DataLoader] = (
 
 lr: float = 10
 
-model_trainer: model.generator_trainer = model.generator_trainer(returns_dataloaders, lr, momentum = 0.01, in_size = num_rets, lmbd = 0.1, warmups = 40, multi = 1000, device = device)
+model_trainer: model.generator_trainer = model.generator_trainer(returns_dataloaders, lr, momentum = 0.01, in_size = num_rets, lmbd = 0.1, eta = 10, warmups = 40, multi = 1000, device = device)
 for t in range(epochs):
 	print(f"Epoch {t + 1}\n-------------------------------")
 	history, size = model_trainer.train()
