@@ -1,557 +1,558 @@
 
-pytorch2.12.1:®ã
-º
+pytorch2.12.1:İå
+¾
 returns
 val_0val_1node_MatMul_1"MatMulJ|
 	namespaceo: base.arch_model.feedforward_generation/project_up: torch.nn.modules.linear.Linear/linear: aten.linear.defaultJ…
 pkg.torch.onnx.class_hierarchyc['base.arch_model.feedforward_generation', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J²
 pkg.torch.onnx.fx_node—%linear : [num_users=2] = call_function[target=torch.ops.aten.linear.default](args = (%returns, %p_project_up_weight, %p_project_up_bias), kwargs = {})J:
-pkg.torch.onnx.name_scopes['', 'project_up', 'linear']J’
-pkg.torch.onnx.stack_traceóFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 77, in forward
+pkg.torch.onnx.name_scopes['', 'project_up', 'linear']J–
+pkg.torch.onnx.stack_trace÷File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 79, in forward
     project_1: torch.Tensor = self.project_up(returns)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-¾
+Â
 val_1
 project_up.biaslinearnode_linear"AddJ|
 	namespaceo: base.arch_model.feedforward_generation/project_up: torch.nn.modules.linear.Linear/linear: aten.linear.defaultJ…
 pkg.torch.onnx.class_hierarchyc['base.arch_model.feedforward_generation', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J²
 pkg.torch.onnx.fx_node—%linear : [num_users=2] = call_function[target=torch.ops.aten.linear.default](args = (%returns, %p_project_up_weight, %p_project_up_bias), kwargs = {})J:
-pkg.torch.onnx.name_scopes['', 'project_up', 'linear']J’
-pkg.torch.onnx.stack_traceóFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 77, in forward
+pkg.torch.onnx.name_scopes['', 'project_up', 'linear']J–
+pkg.torch.onnx.stack_trace÷File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 79, in forward
     project_1: torch.Tensor = self.project_up(returns)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ã	
+ì	
 linear
 val_2val_3node_MatMul_3"MatMulJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack1: torch.nn.modules.container.Sequential/mlp_stack1.0: torch.nn.modules.linear.Linear/linear_1: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J·
 pkg.torch.onnx.fx_nodeœ%linear_1 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%linear, %p_mlp_stack1_0_weight, %p_mlp_stack1_0_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.0', 'linear_1']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 78, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.0', 'linear_1']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 80, in forward
     res1: torch.Tensor = self.mlp_stack1(project_1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-î	
+÷	
 val_3
 mlp_stack1.0.biaslinear_1node_linear_1"AddJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack1: torch.nn.modules.container.Sequential/mlp_stack1.0: torch.nn.modules.linear.Linear/linear_1: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J·
 pkg.torch.onnx.fx_nodeœ%linear_1 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%linear, %p_mlp_stack1_0_weight, %p_mlp_stack1_0_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.0', 'linear_1']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 78, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.0', 'linear_1']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 80, in forward
     res1: torch.Tensor = self.mlp_stack1(project_1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-	
+¦	
 linear_1relu	node_relu"ReluJ¯
 	namespace¡: base.arch_model.feedforward_generation/mlp_stack1: torch.nn.modules.container.Sequential/mlp_stack1.1: torch.nn.modules.activation.ReLU/relu: aten.relu.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']J…
 pkg.torch.onnx.fx_nodek%relu : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_1,), kwargs = {})JH
-pkg.torch.onnx.name_scopes*['', 'mlp_stack1', 'mlp_stack1.1', 'relu']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 78, in forward
+pkg.torch.onnx.name_scopes*['', 'mlp_stack1', 'mlp_stack1.1', 'relu']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 80, in forward
     res1: torch.Tensor = self.mlp_stack1(project_1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
     return F.relu(input, inplace=self.inplace)
-ß	
+è	
 relu
 val_4val_5node_MatMul_5"MatMulJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack1: torch.nn.modules.container.Sequential/mlp_stack1.2: torch.nn.modules.linear.Linear/linear_2: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']Jµ
 pkg.torch.onnx.fx_nodeš%linear_2 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu, %p_mlp_stack1_2_weight, %p_mlp_stack1_2_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.2', 'linear_2']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 78, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.2', 'linear_2']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 80, in forward
     res1: torch.Tensor = self.mlp_stack1(project_1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ì	
+õ	
 val_5
 mlp_stack1.2.biaslinear_2node_linear_2"AddJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack1: torch.nn.modules.container.Sequential/mlp_stack1.2: torch.nn.modules.linear.Linear/linear_2: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']Jµ
 pkg.torch.onnx.fx_nodeš%linear_2 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu, %p_mlp_stack1_2_weight, %p_mlp_stack1_2_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.2', 'linear_2']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 78, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.2', 'linear_2']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 80, in forward
     res1: torch.Tensor = self.mlp_stack1(project_1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-§	
+°	
 linear_2relu_1node_relu_1"ReluJ±
 	namespace£: base.arch_model.feedforward_generation/mlp_stack1: torch.nn.modules.container.Sequential/mlp_stack1.3: torch.nn.modules.activation.ReLU/relu_1: aten.relu.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']J‡
 pkg.torch.onnx.fx_nodem%relu_1 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_2,), kwargs = {})JJ
-pkg.torch.onnx.name_scopes,['', 'mlp_stack1', 'mlp_stack1.3', 'relu_1']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 78, in forward
+pkg.torch.onnx.name_scopes,['', 'mlp_stack1', 'mlp_stack1.3', 'relu_1']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 80, in forward
     res1: torch.Tensor = self.mlp_stack1(project_1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
     return F.relu(input, inplace=self.inplace)
-ã	
+ì	
 relu_1
 val_6val_7node_MatMul_7"MatMulJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack1: torch.nn.modules.container.Sequential/mlp_stack1.4: torch.nn.modules.linear.Linear/linear_3: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J·
 pkg.torch.onnx.fx_nodeœ%linear_3 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu_1, %p_mlp_stack1_4_weight, %p_mlp_stack1_4_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.4', 'linear_3']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 78, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.4', 'linear_3']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 80, in forward
     res1: torch.Tensor = self.mlp_stack1(project_1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-î	
+÷	
 val_7
 mlp_stack1.4.biaslinear_3node_linear_3"AddJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack1: torch.nn.modules.container.Sequential/mlp_stack1.4: torch.nn.modules.linear.Linear/linear_3: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J·
 pkg.torch.onnx.fx_nodeœ%linear_3 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu_1, %p_mlp_stack1_4_weight, %p_mlp_stack1_4_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.4', 'linear_3']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 78, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack1', 'mlp_stack1.4', 'linear_3']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 80, in forward
     res1: torch.Tensor = self.mlp_stack1(project_1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-§	
+°	
 linear_3relu_2node_relu_2"ReluJ±
 	namespace£: base.arch_model.feedforward_generation/mlp_stack1: torch.nn.modules.container.Sequential/mlp_stack1.5: torch.nn.modules.activation.ReLU/relu_2: aten.relu.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']J‡
 pkg.torch.onnx.fx_nodem%relu_2 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_3,), kwargs = {})JJ
-pkg.torch.onnx.name_scopes,['', 'mlp_stack1', 'mlp_stack1.5', 'relu_2']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 78, in forward
+pkg.torch.onnx.name_scopes,['', 'mlp_stack1', 'mlp_stack1.5', 'relu_2']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 80, in forward
     res1: torch.Tensor = self.mlp_stack1(project_1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
     return F.relu(input, inplace=self.inplace)
-Ì
+Ë
 relu_2
 linearaddnode_add"AddJJ
 	namespace=: base.arch_model.feedforward_generation/add: aten.add.TensorJ_
 pkg.torch.onnx.class_hierarchy=['base.arch_model.feedforward_generation', 'aten.add.Tensor']Jˆ
 pkg.torch.onnx.fx_noden%add : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%relu_2, %linear), kwargs = {})J)
-pkg.torch.onnx.name_scopes['', 'add']JÂ
-pkg.torch.onnx.stack_trace£File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 79, in forward
+pkg.torch.onnx.name_scopes['', 'add']JÁ
+pkg.torch.onnx.stack_trace¢File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 81, in forward
     raw_output1: torch.Tensor = res1 + project_1
-Ñ
+Õ
 add
 val_8val_9node_MatMul_9"MatMulJ‚
 	namespaceu: base.arch_model.feedforward_generation/project_down_1: torch.nn.modules.linear.Linear/linear_4: aten.linear.defaultJ…
 pkg.torch.onnx.class_hierarchyc['base.arch_model.feedforward_generation', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¸
 pkg.torch.onnx.fx_node%linear_4 : [num_users=2] = call_function[target=torch.ops.aten.linear.default](args = (%add, %p_project_down_1_weight, %p_project_down_1_bias), kwargs = {})J@
-pkg.torch.onnx.name_scopes"['', 'project_down_1', 'linear_4']Jš
-pkg.torch.onnx.stack_traceûFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 80, in forward
+pkg.torch.onnx.name_scopes"['', 'project_down_1', 'linear_4']J
+pkg.torch.onnx.stack_traceÿFile "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 82, in forward
     project_2: torch.Tensor = self.project_down_1(raw_output1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-á
+å
 val_9
 project_down_1.biaslinear_4node_linear_4"AddJ‚
 	namespaceu: base.arch_model.feedforward_generation/project_down_1: torch.nn.modules.linear.Linear/linear_4: aten.linear.defaultJ…
 pkg.torch.onnx.class_hierarchyc['base.arch_model.feedforward_generation', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¸
 pkg.torch.onnx.fx_node%linear_4 : [num_users=2] = call_function[target=torch.ops.aten.linear.default](args = (%add, %p_project_down_1_weight, %p_project_down_1_bias), kwargs = {})J@
-pkg.torch.onnx.name_scopes"['', 'project_down_1', 'linear_4']Jš
-pkg.torch.onnx.stack_traceûFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 80, in forward
+pkg.torch.onnx.name_scopes"['', 'project_down_1', 'linear_4']J
+pkg.torch.onnx.stack_traceÿFile "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 82, in forward
     project_2: torch.Tensor = self.project_down_1(raw_output1)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ê	
+ó	
 linear_4
 val_10val_11node_MatMul_11"MatMulJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack2: torch.nn.modules.container.Sequential/mlp_stack2.0: torch.nn.modules.linear.Linear/linear_5: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¹
 pkg.torch.onnx.fx_node%linear_5 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%linear_4, %p_mlp_stack2_0_weight, %p_mlp_stack2_0_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.0', 'linear_5']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 81, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.0', 'linear_5']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 83, in forward
     res2: torch.Tensor = self.mlp_stack2(project_2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ñ	
+ú	
 val_11
 mlp_stack2.0.biaslinear_5node_linear_5"AddJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack2: torch.nn.modules.container.Sequential/mlp_stack2.0: torch.nn.modules.linear.Linear/linear_5: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¹
 pkg.torch.onnx.fx_node%linear_5 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%linear_4, %p_mlp_stack2_0_weight, %p_mlp_stack2_0_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.0', 'linear_5']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 81, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.0', 'linear_5']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 83, in forward
     res2: torch.Tensor = self.mlp_stack2(project_2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-§	
+°	
 linear_5relu_3node_relu_3"ReluJ±
 	namespace£: base.arch_model.feedforward_generation/mlp_stack2: torch.nn.modules.container.Sequential/mlp_stack2.1: torch.nn.modules.activation.ReLU/relu_3: aten.relu.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']J‡
 pkg.torch.onnx.fx_nodem%relu_3 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_5,), kwargs = {})JJ
-pkg.torch.onnx.name_scopes,['', 'mlp_stack2', 'mlp_stack2.1', 'relu_3']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 81, in forward
+pkg.torch.onnx.name_scopes,['', 'mlp_stack2', 'mlp_stack2.1', 'relu_3']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 83, in forward
     res2: torch.Tensor = self.mlp_stack2(project_2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
     return F.relu(input, inplace=self.inplace)
-æ	
+ï	
 relu_3
 val_12val_13node_MatMul_13"MatMulJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack2: torch.nn.modules.container.Sequential/mlp_stack2.2: torch.nn.modules.linear.Linear/linear_6: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J·
 pkg.torch.onnx.fx_nodeœ%linear_6 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu_3, %p_mlp_stack2_2_weight, %p_mlp_stack2_2_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.2', 'linear_6']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 81, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.2', 'linear_6']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 83, in forward
     res2: torch.Tensor = self.mlp_stack2(project_2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ï	
+ø	
 val_13
 mlp_stack2.2.biaslinear_6node_linear_6"AddJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack2: torch.nn.modules.container.Sequential/mlp_stack2.2: torch.nn.modules.linear.Linear/linear_6: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J·
 pkg.torch.onnx.fx_nodeœ%linear_6 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu_3, %p_mlp_stack2_2_weight, %p_mlp_stack2_2_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.2', 'linear_6']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 81, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.2', 'linear_6']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 83, in forward
     res2: torch.Tensor = self.mlp_stack2(project_2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-§	
+°	
 linear_6relu_4node_relu_4"ReluJ±
 	namespace£: base.arch_model.feedforward_generation/mlp_stack2: torch.nn.modules.container.Sequential/mlp_stack2.3: torch.nn.modules.activation.ReLU/relu_4: aten.relu.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']J‡
 pkg.torch.onnx.fx_nodem%relu_4 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_6,), kwargs = {})JJ
-pkg.torch.onnx.name_scopes,['', 'mlp_stack2', 'mlp_stack2.3', 'relu_4']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 81, in forward
+pkg.torch.onnx.name_scopes,['', 'mlp_stack2', 'mlp_stack2.3', 'relu_4']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 83, in forward
     res2: torch.Tensor = self.mlp_stack2(project_2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
     return F.relu(input, inplace=self.inplace)
-æ	
+ï	
 relu_4
 val_14val_15node_MatMul_15"MatMulJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack2: torch.nn.modules.container.Sequential/mlp_stack2.4: torch.nn.modules.linear.Linear/linear_7: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J·
 pkg.torch.onnx.fx_nodeœ%linear_7 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu_4, %p_mlp_stack2_4_weight, %p_mlp_stack2_4_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.4', 'linear_7']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 81, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.4', 'linear_7']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 83, in forward
     res2: torch.Tensor = self.mlp_stack2(project_2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ï	
+ø	
 val_15
 mlp_stack2.4.biaslinear_7node_linear_7"AddJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack2: torch.nn.modules.container.Sequential/mlp_stack2.4: torch.nn.modules.linear.Linear/linear_7: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J·
 pkg.torch.onnx.fx_nodeœ%linear_7 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu_4, %p_mlp_stack2_4_weight, %p_mlp_stack2_4_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.4', 'linear_7']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 81, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack2', 'mlp_stack2.4', 'linear_7']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 83, in forward
     res2: torch.Tensor = self.mlp_stack2(project_2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-§	
+°	
 linear_7relu_5node_relu_5"ReluJ±
 	namespace£: base.arch_model.feedforward_generation/mlp_stack2: torch.nn.modules.container.Sequential/mlp_stack2.5: torch.nn.modules.activation.ReLU/relu_5: aten.relu.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']J‡
 pkg.torch.onnx.fx_nodem%relu_5 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_7,), kwargs = {})JJ
-pkg.torch.onnx.name_scopes,['', 'mlp_stack2', 'mlp_stack2.5', 'relu_5']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 81, in forward
+pkg.torch.onnx.name_scopes,['', 'mlp_stack2', 'mlp_stack2.5', 'relu_5']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 83, in forward
     res2: torch.Tensor = self.mlp_stack2(project_2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
     return F.relu(input, inplace=self.inplace)
-Ú
+Ù
 relu_5
 linear_4add_1
 node_add_1"AddJL
 	namespace?: base.arch_model.feedforward_generation/add_1: aten.add.TensorJ_
 pkg.torch.onnx.class_hierarchy=['base.arch_model.feedforward_generation', 'aten.add.Tensor']JŒ
 pkg.torch.onnx.fx_noder%add_1 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%relu_5, %linear_4), kwargs = {})J+
-pkg.torch.onnx.name_scopes['', 'add_1']JÂ
-pkg.torch.onnx.stack_trace£File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 82, in forward
+pkg.torch.onnx.name_scopes['', 'add_1']JÁ
+pkg.torch.onnx.stack_trace¢File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 84, in forward
     raw_output2: torch.Tensor = res2 + project_2
-Ø
+Ü
 add_1
 val_16val_17node_MatMul_17"MatMulJ‚
 	namespaceu: base.arch_model.feedforward_generation/project_down_2: torch.nn.modules.linear.Linear/linear_8: aten.linear.defaultJ…
 pkg.torch.onnx.class_hierarchyc['base.arch_model.feedforward_generation', 'torch.nn.modules.linear.Linear', 'aten.linear.default']Jº
 pkg.torch.onnx.fx_nodeŸ%linear_8 : [num_users=2] = call_function[target=torch.ops.aten.linear.default](args = (%add_1, %p_project_down_2_weight, %p_project_down_2_bias), kwargs = {})J@
-pkg.torch.onnx.name_scopes"['', 'project_down_2', 'linear_8']Jš
-pkg.torch.onnx.stack_traceûFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 83, in forward
+pkg.torch.onnx.name_scopes"['', 'project_down_2', 'linear_8']J
+pkg.torch.onnx.stack_traceÿFile "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 85, in forward
     project_3: torch.Tensor = self.project_down_2(raw_output2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ä
+è
 val_17
 project_down_2.biaslinear_8node_linear_8"AddJ‚
 	namespaceu: base.arch_model.feedforward_generation/project_down_2: torch.nn.modules.linear.Linear/linear_8: aten.linear.defaultJ…
 pkg.torch.onnx.class_hierarchyc['base.arch_model.feedforward_generation', 'torch.nn.modules.linear.Linear', 'aten.linear.default']Jº
 pkg.torch.onnx.fx_nodeŸ%linear_8 : [num_users=2] = call_function[target=torch.ops.aten.linear.default](args = (%add_1, %p_project_down_2_weight, %p_project_down_2_bias), kwargs = {})J@
-pkg.torch.onnx.name_scopes"['', 'project_down_2', 'linear_8']Jš
-pkg.torch.onnx.stack_traceûFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 83, in forward
+pkg.torch.onnx.name_scopes"['', 'project_down_2', 'linear_8']J
+pkg.torch.onnx.stack_traceÿFile "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 85, in forward
     project_3: torch.Tensor = self.project_down_2(raw_output2)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ê	
+ó	
 linear_8
 val_18val_19node_MatMul_19"MatMulJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack3: torch.nn.modules.container.Sequential/mlp_stack3.0: torch.nn.modules.linear.Linear/linear_9: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¹
 pkg.torch.onnx.fx_node%linear_9 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%linear_8, %p_mlp_stack3_0_weight, %p_mlp_stack3_0_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack3', 'mlp_stack3.0', 'linear_9']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 84, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack3', 'mlp_stack3.0', 'linear_9']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 86, in forward
     res3: torch.Tensor = self.mlp_stack3(project_3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ñ	
+ú	
 val_19
 mlp_stack3.0.biaslinear_9node_linear_9"AddJ³
 	namespace¥: base.arch_model.feedforward_generation/mlp_stack3: torch.nn.modules.container.Sequential/mlp_stack3.0: torch.nn.modules.linear.Linear/linear_9: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¹
 pkg.torch.onnx.fx_node%linear_9 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%linear_8, %p_mlp_stack3_0_weight, %p_mlp_stack3_0_bias), kwargs = {})JL
-pkg.torch.onnx.name_scopes.['', 'mlp_stack3', 'mlp_stack3.0', 'linear_9']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 84, in forward
+pkg.torch.onnx.name_scopes.['', 'mlp_stack3', 'mlp_stack3.0', 'linear_9']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 86, in forward
     res3: torch.Tensor = self.mlp_stack3(project_3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-§	
+°	
 linear_9relu_6node_relu_6"ReluJ±
 	namespace£: base.arch_model.feedforward_generation/mlp_stack3: torch.nn.modules.container.Sequential/mlp_stack3.1: torch.nn.modules.activation.ReLU/relu_6: aten.relu.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']J‡
 pkg.torch.onnx.fx_nodem%relu_6 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_9,), kwargs = {})JJ
-pkg.torch.onnx.name_scopes,['', 'mlp_stack3', 'mlp_stack3.1', 'relu_6']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 84, in forward
+pkg.torch.onnx.name_scopes,['', 'mlp_stack3', 'mlp_stack3.1', 'relu_6']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 86, in forward
     res3: torch.Tensor = self.mlp_stack3(project_3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
     return F.relu(input, inplace=self.inplace)
-é	
+ò	
 relu_6
 val_20val_21node_MatMul_21"MatMulJ´
 	namespace¦: base.arch_model.feedforward_generation/mlp_stack3: torch.nn.modules.container.Sequential/mlp_stack3.2: torch.nn.modules.linear.Linear/linear_10: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¸
 pkg.torch.onnx.fx_node%linear_10 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu_6, %p_mlp_stack3_2_weight, %p_mlp_stack3_2_bias), kwargs = {})JM
-pkg.torch.onnx.name_scopes/['', 'mlp_stack3', 'mlp_stack3.2', 'linear_10']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 84, in forward
+pkg.torch.onnx.name_scopes/['', 'mlp_stack3', 'mlp_stack3.2', 'linear_10']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 86, in forward
     res3: torch.Tensor = self.mlp_stack3(project_3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ô	
+ı	
 val_21
 mlp_stack3.2.bias	linear_10node_linear_10"AddJ´
 	namespace¦: base.arch_model.feedforward_generation/mlp_stack3: torch.nn.modules.container.Sequential/mlp_stack3.2: torch.nn.modules.linear.Linear/linear_10: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¸
 pkg.torch.onnx.fx_node%linear_10 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu_6, %p_mlp_stack3_2_weight, %p_mlp_stack3_2_bias), kwargs = {})JM
-pkg.torch.onnx.name_scopes/['', 'mlp_stack3', 'mlp_stack3.2', 'linear_10']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 84, in forward
+pkg.torch.onnx.name_scopes/['', 'mlp_stack3', 'mlp_stack3.2', 'linear_10']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 86, in forward
     res3: torch.Tensor = self.mlp_stack3(project_3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-©	
+²	
 	linear_10relu_7node_relu_7"ReluJ±
 	namespace£: base.arch_model.feedforward_generation/mlp_stack3: torch.nn.modules.container.Sequential/mlp_stack3.3: torch.nn.modules.activation.ReLU/relu_7: aten.relu.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jˆ
 pkg.torch.onnx.fx_noden%relu_7 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_10,), kwargs = {})JJ
-pkg.torch.onnx.name_scopes,['', 'mlp_stack3', 'mlp_stack3.3', 'relu_7']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 84, in forward
+pkg.torch.onnx.name_scopes,['', 'mlp_stack3', 'mlp_stack3.3', 'relu_7']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 86, in forward
     res3: torch.Tensor = self.mlp_stack3(project_3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
     return F.relu(input, inplace=self.inplace)
-é	
+ò	
 relu_7
 val_22val_23node_MatMul_23"MatMulJ´
 	namespace¦: base.arch_model.feedforward_generation/mlp_stack3: torch.nn.modules.container.Sequential/mlp_stack3.4: torch.nn.modules.linear.Linear/linear_11: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¸
 pkg.torch.onnx.fx_node%linear_11 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu_7, %p_mlp_stack3_4_weight, %p_mlp_stack3_4_bias), kwargs = {})JM
-pkg.torch.onnx.name_scopes/['', 'mlp_stack3', 'mlp_stack3.4', 'linear_11']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 84, in forward
+pkg.torch.onnx.name_scopes/['', 'mlp_stack3', 'mlp_stack3.4', 'linear_11']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 86, in forward
     res3: torch.Tensor = self.mlp_stack3(project_3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-ô	
+ı	
 val_23
 mlp_stack3.4.bias	linear_11node_linear_11"AddJ´
 	namespace¦: base.arch_model.feedforward_generation/mlp_stack3: torch.nn.modules.container.Sequential/mlp_stack3.4: torch.nn.modules.linear.Linear/linear_11: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J¸
 pkg.torch.onnx.fx_node%linear_11 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%relu_7, %p_mlp_stack3_4_weight, %p_mlp_stack3_4_bias), kwargs = {})JM
-pkg.torch.onnx.name_scopes/['', 'mlp_stack3', 'mlp_stack3.4', 'linear_11']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 84, in forward
+pkg.torch.onnx.name_scopes/['', 'mlp_stack3', 'mlp_stack3.4', 'linear_11']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 86, in forward
     res3: torch.Tensor = self.mlp_stack3(project_3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-©	
+²	
 	linear_11relu_8node_relu_8"ReluJ±
 	namespace£: base.arch_model.feedforward_generation/mlp_stack3: torch.nn.modules.container.Sequential/mlp_stack3.5: torch.nn.modules.activation.ReLU/relu_8: aten.relu.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jˆ
 pkg.torch.onnx.fx_noden%relu_8 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_11,), kwargs = {})JJ
-pkg.torch.onnx.name_scopes,['', 'mlp_stack3', 'mlp_stack3.5', 'relu_8']JÃ
-pkg.torch.onnx.stack_trace¤File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 84, in forward
+pkg.torch.onnx.name_scopes,['', 'mlp_stack3', 'mlp_stack3.5', 'relu_8']JÌ
+pkg.torch.onnx.stack_trace­File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 86, in forward
     res3: torch.Tensor = self.mlp_stack3(project_3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
     return F.relu(input, inplace=self.inplace)
-Ú
+Ù
 relu_8
 linear_8add_2
 node_add_2"AddJL
 	namespace?: base.arch_model.feedforward_generation/add_2: aten.add.TensorJ_
 pkg.torch.onnx.class_hierarchy=['base.arch_model.feedforward_generation', 'aten.add.Tensor']JŒ
 pkg.torch.onnx.fx_noder%add_2 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%relu_8, %linear_8), kwargs = {})J+
-pkg.torch.onnx.name_scopes['', 'add_2']JÂ
-pkg.torch.onnx.stack_trace£File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 85, in forward
+pkg.torch.onnx.name_scopes['', 'add_2']JÁ
+pkg.torch.onnx.stack_trace¢File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 87, in forward
     raw_output3: torch.Tensor = res3 + project_3
-ı	
+†
+
 add_2
 val_24val_25node_MatMul_25"MatMulJ¸
 	namespaceª: base.arch_model.feedforward_generation/project_down: torch.nn.modules.container.Sequential/project_down.0: torch.nn.modules.linear.Linear/linear_12: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J»
 pkg.torch.onnx.fx_node %linear_12 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%add_2, %p_project_down_0_weight, %p_project_down_0_bias), kwargs = {})JQ
-pkg.torch.onnx.name_scopes3['', 'project_down', 'project_down.0', 'linear_12']JÍ
-pkg.torch.onnx.stack_trace®File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 86, in forward
+pkg.torch.onnx.name_scopes3['', 'project_down', 'project_down.0', 'linear_12']JÖ
+pkg.torch.onnx.stack_trace·File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 88, in forward
     raw_output: torch.Tensor = self.project_down(raw_output3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-‹
+”
 
 val_25
 project_down.0.bias	linear_12node_linear_12"AddJ¸
 	namespaceª: base.arch_model.feedforward_generation/project_down: torch.nn.modules.container.Sequential/project_down.0: torch.nn.modules.linear.Linear/linear_12: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']J»
 pkg.torch.onnx.fx_node %linear_12 : [num_users=1] = call_function[target=torch.ops.aten.linear.default](args = (%add_2, %p_project_down_0_weight, %p_project_down_0_bias), kwargs = {})JQ
-pkg.torch.onnx.name_scopes3['', 'project_down', 'project_down.0', 'linear_12']JÍ
-pkg.torch.onnx.stack_trace®File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 86, in forward
+pkg.torch.onnx.name_scopes3['', 'project_down', 'project_down.0', 'linear_12']JÖ
+pkg.torch.onnx.stack_trace·File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 88, in forward
     raw_output: torch.Tensor = self.project_down(raw_output3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-»	
+Ä	
 	linear_12relu_9node_relu_9"ReluJµ
 	namespace§: base.arch_model.feedforward_generation/project_down: torch.nn.modules.container.Sequential/project_down.1: torch.nn.modules.activation.ReLU/relu_9: aten.relu.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.ReLU', 'aten.relu.default']Jˆ
 pkg.torch.onnx.fx_noden%relu_9 : [num_users=1] = call_function[target=torch.ops.aten.relu.default](args = (%linear_12,), kwargs = {})JN
-pkg.torch.onnx.name_scopes0['', 'project_down', 'project_down.1', 'relu_9']JÍ
-pkg.torch.onnx.stack_trace®File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 86, in forward
+pkg.torch.onnx.name_scopes0['', 'project_down', 'project_down.1', 'relu_9']JÖ
+pkg.torch.onnx.stack_trace·File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 88, in forward
     raw_output: torch.Tensor = self.project_down(raw_output3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/activation.py", line 143, in forward
     return F.relu(input, inplace=self.inplace)
-ƒ
+Œ
 
 relu_9
 val_26val_27node_MatMul_27"MatMulJ¸
 	namespaceª: base.arch_model.feedforward_generation/project_down: torch.nn.modules.container.Sequential/project_down.2: torch.nn.modules.linear.Linear/linear_13: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']JÀ
 pkg.torch.onnx.fx_node¥%linear_13 : [num_users=3] = call_function[target=torch.ops.aten.linear.default](args = (%relu_9, %p_project_down_2_weight_1, %p_project_down_2_bias_1), kwargs = {})JQ
-pkg.torch.onnx.name_scopes3['', 'project_down', 'project_down.2', 'linear_13']JÍ
-pkg.torch.onnx.stack_trace®File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 86, in forward
+pkg.torch.onnx.name_scopes3['', 'project_down', 'project_down.2', 'linear_13']JÖ
+pkg.torch.onnx.stack_trace·File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 88, in forward
     raw_output: torch.Tensor = self.project_down(raw_output3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-
+™
 
 val_27
 project_down.2.bias	linear_13node_linear_13"AddJ¸
 	namespaceª: base.arch_model.feedforward_generation/project_down: torch.nn.modules.container.Sequential/project_down.2: torch.nn.modules.linear.Linear/linear_13: aten.linear.defaultJ¯
 pkg.torch.onnx.class_hierarchyŒ['base.arch_model.feedforward_generation', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.linear.Linear', 'aten.linear.default']JÀ
 pkg.torch.onnx.fx_node¥%linear_13 : [num_users=3] = call_function[target=torch.ops.aten.linear.default](args = (%relu_9, %p_project_down_2_weight_1, %p_project_down_2_bias_1), kwargs = {})JQ
-pkg.torch.onnx.name_scopes3['', 'project_down', 'project_down.2', 'linear_13']JÍ
-pkg.torch.onnx.stack_trace®File "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 86, in forward
+pkg.torch.onnx.name_scopes3['', 'project_down', 'project_down.2', 'linear_13']JÖ
+pkg.torch.onnx.stack_trace·File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 88, in forward
     raw_output: torch.Tensor = self.project_down(raw_output3)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/Users/polarxiong/Documents/code/basic_neural/transformer/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
+  File "/Users/polarxiong/Documents/Coding/projects/returns-prediction/.venv/lib/python3.14/site-packages/torch/nn/modules/linear.py", line 134, in forward
     return F.linear(input, self.weight, self.bias)
-Ÿ
+
 	linear_13
 val_28selectnode_select"Gather*
 axis  JM
 	namespace@: base.arch_model.feedforward_generation/select: aten.select.intJ_
 pkg.torch.onnx.class_hierarchy=['base.arch_model.feedforward_generation', 'aten.select.int']J‹
 pkg.torch.onnx.fx_nodeq%select : [num_users=1] = call_function[target=torch.ops.aten.select.int](args = (%linear_13, 0, 0), kwargs = {})J,
-pkg.torch.onnx.name_scopes['', 'select']Jó
-pkg.torch.onnx.stack_traceÔFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 87, in forward
+pkg.torch.onnx.name_scopes['', 'select']Jò
+pkg.torch.onnx.stack_traceÓFile "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 89, in forward
     output = torch.stack([raw_output[..., 0], raw_output[..., 1] * raw_output[..., 1]], dim = -1)
-©
+¨
 	linear_13
 val_29select_1node_select_1"Gather*
 axis  JO
 	namespaceB: base.arch_model.feedforward_generation/select_1: aten.select.intJ_
 pkg.torch.onnx.class_hierarchy=['base.arch_model.feedforward_generation', 'aten.select.int']J
 pkg.torch.onnx.fx_nodes%select_1 : [num_users=1] = call_function[target=torch.ops.aten.select.int](args = (%linear_13, 0, 1), kwargs = {})J.
-pkg.torch.onnx.name_scopes['', 'select_1']Jó
-pkg.torch.onnx.stack_traceÔFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 87, in forward
+pkg.torch.onnx.name_scopes['', 'select_1']Jò
+pkg.torch.onnx.stack_traceÓFile "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 89, in forward
     output = torch.stack([raw_output[..., 0], raw_output[..., 1] * raw_output[..., 1]], dim = -1)
-…
+„
 select_1
 select_1mulnode_mul"MulJJ
 	namespace=: base.arch_model.feedforward_generation/mul: aten.mul.TensorJ_
 pkg.torch.onnx.class_hierarchy=['base.arch_model.feedforward_generation', 'aten.mul.Tensor']JŒ
 pkg.torch.onnx.fx_noder%mul : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%select_1, %select_2), kwargs = {})J)
-pkg.torch.onnx.name_scopes['', 'mul']Jó
-pkg.torch.onnx.stack_traceÔFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 87, in forward
+pkg.torch.onnx.name_scopes['', 'mul']Jò
+pkg.torch.onnx.stack_traceÓFile "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 89, in forward
     output = torch.stack([raw_output[..., 0], raw_output[..., 1] * raw_output[..., 1]], dim = -1)
-¡
+ 
 select
 val_30val_31node_Unsqueeze_31"	UnsqueezeJO
 	namespaceB: base.arch_model.feedforward_generation/stack: aten.stack.defaultJb
 pkg.torch.onnx.class_hierarchy@['base.arch_model.feedforward_generation', 'aten.stack.default']J
 pkg.torch.onnx.fx_nodev%stack : [num_users=1] = call_function[target=torch.ops.aten.stack.default](args = ([%select, %mul], -1), kwargs = {})J+
-pkg.torch.onnx.name_scopes['', 'stack']Jó
-pkg.torch.onnx.stack_traceÔFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 87, in forward
+pkg.torch.onnx.name_scopes['', 'stack']Jò
+pkg.torch.onnx.stack_traceÓFile "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 89, in forward
     output = torch.stack([raw_output[..., 0], raw_output[..., 1] * raw_output[..., 1]], dim = -1)
-
+
 mul
 val_30val_33node_Unsqueeze_33"	UnsqueezeJO
 	namespaceB: base.arch_model.feedforward_generation/stack: aten.stack.defaultJb
 pkg.torch.onnx.class_hierarchy@['base.arch_model.feedforward_generation', 'aten.stack.default']J
 pkg.torch.onnx.fx_nodev%stack : [num_users=1] = call_function[target=torch.ops.aten.stack.default](args = ([%select, %mul], -1), kwargs = {})J+
-pkg.torch.onnx.name_scopes['', 'stack']Jó
-pkg.torch.onnx.stack_traceÔFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 87, in forward
+pkg.torch.onnx.name_scopes['', 'stack']Jò
+pkg.torch.onnx.stack_traceÓFile "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 89, in forward
     output = torch.stack([raw_output[..., 0], raw_output[..., 1] * raw_output[..., 1]], dim = -1)
-¬
+«
 val_31
 val_33stack
 node_stack"Concat*
@@ -559,17 +560,18 @@ node_stack"Concat*
 	namespaceB: base.arch_model.feedforward_generation/stack: aten.stack.defaultJb
 pkg.torch.onnx.class_hierarchy@['base.arch_model.feedforward_generation', 'aten.stack.default']J
 pkg.torch.onnx.fx_nodev%stack : [num_users=1] = call_function[target=torch.ops.aten.stack.default](args = ([%select, %mul], -1), kwargs = {})J+
-pkg.torch.onnx.name_scopes['', 'stack']Jó
-pkg.torch.onnx.stack_traceÔFile "/Users/polarxiong/Documents/code/basic_neural/transformer/robot/gen/base/arch_model.py", line 87, in forward
+pkg.torch.onnx.name_scopes['', 'stack']Jò
+pkg.torch.onnx.stack_traceÓFile "/Users/polarxiong/Documents/Coding/projects/returns-prediction/gen/base/arch_model.py", line 89, in forward
     output = torch.stack([raw_output[..., 0], raw_output[..., 1] * raw_output[..., 1]], dim = -1)
-main_graph*Bproject_up.biasJx@±’½´Êˆ>Zdü¼÷r÷=±”œ>‡>…“>É%ú¼´d²½%B¥>€Ó…¾å½q5š¾·1Š>¡_r½LL‰½^ûc>WF=VNt>[{‚>‚h>»0<>	x¡¾!”Ã½nõ•>§9¾¾Uº=`ºõ›Ÿ;Í·¼*kBproject_down_1.biasJPF-8¾,¸>;›=}K(¾%>DG=Q
-½5Â¶=½¸²½µ.¾–.;¾->	ï½š½ ·¾Zˆ=¶²Ó½¼Î$½¸G¾ÒĞ/=*C
-Bproject_down_2.biasJ(W>‘d&>©Í•½Pi	½2GÆ½¼ĞN>zıY>úı=è~¾³Œ0¾*‘Bmlp_stack1.0.biasJx&U¾ÚX>Pà*=×¾	r”½{:œ½9>É|2½`A)=#«>©ß‰=3y+¾S®=Kq}½“O!¾œô¤½p¼€¼ÇN+=Èj5¾„ùr¼ûW#º‡Ô=İ¼¼½4¼1>Æf¼7l<Û&`½@”=Tÿ9½ö´6¾*‘Bmlp_stack1.2.biasJxÿ¾íg=&W¾ThM=1šû½E-W½Å6×<Á²½b¿Ï=}êÏ½2Êf¼é$‡½†¿#¾§¿&¾ú¾şù‰=ğù ¼;—»¼S">î^½»FÅ=#„¾G¦¤½9í¤=8=Hß¹½èY½pŠ
->ŞÛ&>•ß%=*‘Bmlp_stack1.4.biasJx÷š%>Y>+l=§ç€¼Ê‰+¾À¹²½0×=°©½…"2¾y4¾²üŸ½îk¾¬æ =@ö¡½Ëšï½Ékóº"š¦=¼¶½+>P>Ùš=^ÒÃ=;8¿=‡â¬½äæ³½]F¼¸ğ¼&ûó=è\g=}Ö6>*iBmlp_stack2.0.biasJPf A>½Õ='1>£©€½¢»½(P‘=p>a]¾›‰½­qÓ=º¦<>l´=ß:+¾Qìı½Èÿ§=”½€p“½…×>=¢Q>ãúX¾*iBmlp_stack2.2.biasJP”Ø¾*¸ ½!`¾>œF>Ô.À=ıx&¾äN>„A6>IŞ*¾P½T½×ğX=w ½Ûf>3‰Q>ğğ½ğ{=ïMB>|¢Q>–¼½*iBmlp_stack2.4.biasJP™)1>¦¥+¾ôvj½`Æä;qH¾óEB½Iƒ¾•[>²…¼:àá;›]0½¾ç@½ï=¾°{F>ø¾e¼ÉQ6=­_A¾jÒ¾0—§=ßƒ¾*A
-Bmlp_stack3.0.biasJ(>«ú½å§J>ßT”¾Ûì>H‰¾ÓóñºƒĞ=-p>Æ[&¾*A
-Bmlp_stack3.2.biasJ(g>y—&½¾“Ç½‡©”=ĞÃ_¾+[¾ƒü0¾<j!>¬…E¼ò=*A
-Bmlp_stack3.4.biasJ(³ >´îı=ÛF>òØŒ= ¾‘«2>TŞ½,Œ= ]	¼>À¹=*C
-Bproject_down.0.biasJ(3½=U1&>ãS;»àÜ>&áq¾'¤>¶A½Q¹=q½'hâ=*#Bproject_down.2.biasJÏÅÕ=¶-4?*R	Bval_0j!
+main_graph*Bproject_up.biasJx8Õ¾uâÇ=Ê8×¾Ÿ<ƒ½{5ß=“C>›S>,*Â> ¾»™¾½æ¾ª	>Ş&?XĞc>çÇK<Ø¼€>BU>ı>‘M§=ËÚZ=YÑÚ¼´Ç²>‘0X>7X’¾ÕĞ=¨@>ŞĞ–=01Œ¾³ô"?ìõ|>*kBproject_down_1.biasJP¬i¾¾ä%¾'%S>µôú>okÈ¾Z‚>@¼J¾zhÂ=dF‘=QD;¢‹>˜~ö½m3/¼”êë=’è$¾*¾z½†‰¼¢öO¾[¤=*C
+Bproject_down_2.biasJ(»@¿(„º½EŸn¾¨qù¾zN¾ün>>Ûï_=†ëU½i+ª¾ç_¾*‘Bmlp_stack1.0.biasJx”..¾!”‰>a+
+>ºYØ=-Ì ¾âo)¾’}º=/¬Ä½ >>Å">b'd>ñĞú=*]y=»à;>cp¾/ÿ8¾ËÑ#¾à›3>“ï=”ı¾ ©>†²‰=@Â½™3>»z>à‚(>Ââ•=“¡=¹¦l½ä 8>*‘Bmlp_stack1.2.biasJxãL+¾qv¾›ôq<4w÷=h”
+>8…õ=a,*½¡?‚½f`¾íÍ¾U ®½è­¼b¹=]í¾=ñ‰¾¾T¾Ì9Š½î ”<]T¾õO)¾ç
+>÷uø=¡Ş½ü¦¾iõš=¾>Ï"6>¯'‘<ó¤©=*‘Bmlp_stack1.4.biasJxÉa½³_=ŸXk½ßö¬½¿ğÌ½ß«>9{¯=³'Š=Çú»ñÂ=ïîz¼?‘Z>F>îà½‡5f>I‹¾=Bä½½~¾Ö“=šœ`<¥ÍA½qyr½º½Ïƒ¾Ğá¾ÎÔ[>ó	=N<v=>­…¾*iBmlp_stack2.0.biasJPtcW>×([½	âJ¾A¿u½cB>Åt8>–¾Š$÷<$§¾½˜n¾ş¿‰¾!/ò½lñ5¾g•â½VJ—=×ƒ'>˜»½kP,=îŠ¾zx†<*iBmlp_stack2.2.biasJPçĞ¾éo’¾__›=$Ô½9¾hPß»XÔÓ½Ú!A>„`±>~4¹¾â"q¼jş½û“>ø×V¾f:š½òœ>SVÄ¾AÉµ=HÈ½½*iBmlp_stack2.4.biasJP7êœ=ÄÖM>?(´¾[ÄU¾ú¢­¾îm>=>ª½ß_¾hÕ¾u >ú ¿ıÚ¹=è˜U>¸w£¼•	Ï¼ÿ`b¾Ó+l¾g ¿M¾0>>*A
+Bmlp_stack3.0.biasJ(?œú¾+ñè=‚3>jº½à:#½\¾xÖ€>‘£$¾á<>^v¾*A
+Bmlp_stack3.2.biasJ(!‡+¾ã°>zè£>±ú=’d¯½Co"¾Ş· >áÎ±=NXù½ˆZ¾*A
+Bmlp_stack3.4.biasJ(`†>òßØ>hŠó½ä¸8¾*}½;g>4é½’8ã=Ä“)¾ë¾*C
+Bproject_down.0.biasJ(È;,¾yÈQ¿êûˆ½ ÷æ½ƒPC¾ƒŠè=š81?åën¾îû/¾À´Æ>*#Bproject_down.2.biasJªD'¾~ÖS¿*R	Bval_0j!
 locationGLD_9_model.onnx.dataj
 offset2400j
 length1080p*SBval_2j!
@@ -618,7 +620,8 @@ main_graph*Bproject_up.biasJx@±’½´Êˆ>Zdü¼÷r÷=±”œ>‡>…“>É%ú¼´d²½%B¥>€Ó…¾
 locationGLD_9_model.onnx.dataj
 offset1200j
 length400p*`
-Bval_26JP«úU¾mµ½¥¾ ¼;‡o<?üf>(\,¾fç”¼û«ì>ô1b¾AF5¾Ë§½R„>Æ?>Xõš>m&¾Úgx>âé7¾–¦ü=˜¼¨¼*Bval_28J        *Bval_29J       *Bval_30JÿÿÿÿÿÿÿÿZ“
+Bval_26JP_V?°ä½aş¿¬?Y¼ª—›>Wì´=|=3¿y[ ½ç¿ìü»„d¡>ÛÙ»†e ?A±½¾Õ)?,¬¼¼
+¬u?ñŞ»¡BS¿Èá¼*Bval_28J        *Bval_29J       *Bval_30JÿÿÿÿÿÿÿÿZ“
 returns
 
 
