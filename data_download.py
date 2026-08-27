@@ -35,6 +35,20 @@ for symbol in argv[1:]:
 			exit()
 if len(symbols) == 0:
 	exit()
+def fill_minute_gaps(df: pd.DataFrame, timestamp_col: str = "timestamp") -> pd.DataFrame:
+	if df.empty:
+		return df
+	df = df.set_index(timestamp_col).sort_index()
+	full_index = pd.date_range(df.index.min(), df.index.max(), freq="1min")
+	was_present = df.index.to_series().reindex(full_index).notna().to_numpy()
+	df = df.reindex(full_index)
+	prev_price = df["close"].ffill()  # ffill computed on original (pre-gap-fill) close values
+	fill_cols = ["open", "high", "low", "close", "vwap"]
+	df.loc[~was_present, fill_cols] = prev_price[~was_present].to_numpy()[:, None]
+	df.loc[~was_present, ["volume", "trade_count"]] = 0
+	df.index.name = timestamp_col
+	return df.reset_index()
+
 timezone: ZoneInfo = ZoneInfo("America/New_York")
 start_time: datetime = datetime(2020, 1, 1, 0, 0, 0, tzinfo = timezone)
 end_time: datetime = datetime(2026, 8, 1, 0, 0, 0, tzinfo = timezone) 
@@ -50,7 +64,7 @@ while start_time != end_time:
 		)
 		data_list: BarSet = data_client.get_stock_bars(req_param)
 		for bar in data_list.data:
-			data[symbol].append(data_list.df.reset_index().drop(columns = ["symbol"]))
+			data[symbol].append(fill_minute_gaps(data_list.df.reset_index().drop(columns = ["symbol"])))
 		print(f"Finished processing request for symbol {symbol} between days {start_time} and {start_time + timedelta(days = 1)}")
 	start_time = start_time + timedelta(days = 1)
 download_path = "data/{}_data.parquet"

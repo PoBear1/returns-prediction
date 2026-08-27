@@ -10,7 +10,7 @@ All of this was run on a MacBook Pro (2024) M4 Max, however CUDA/the CPU probabl
 
 I originally was planning to not put in the data that I used because of the size (each file is ~50MB) but since now I realised that this works I will put the data inside this repo as well. Here is an overview of the data I got:
 
-1. I used `alpaca-py` as the main client to get market data (both historical and real-time), on the free tier. You can probably guess the quality of the data from that.
+1. I used `alpaca-py` as the main client to get market data (both historical and real-time), on the free tier. You can probably guess the quality of the data from that (spoiler; I'm missing data left and right so I have to clean it myself).
 2. I used minute-by-minute asset bars, rather than day-to-day or hour-by-hour, and if possible my training/testing data came from the very start of 2020 to the end of the 31st of July, 2026.
 3. I used the following assets (no particular reason why apart from the fact that they are all equities which makes it easier to download data freely, I just wanted to see how well my model performed over each type of asset):
    - Garden-variety stocks (AAPL, AMZN, GOOG, META, MSFT, NFLX, NVDA, TSLA)
